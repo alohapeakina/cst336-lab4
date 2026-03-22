@@ -10,7 +10,15 @@ app.get('/', (req, res) => {
 });
 
 app.get('/earth/', (req,res) => {
-    res.render('earth');
+    let planetEarth = planets.getEarth();
+    console.log(planetEarth);
+    res.render('earth', {planetEarth});
+});
+
+app.get('/mars/', (req,res) => {
+    let planetMars = planets.getMars();
+    console.log(planetMars);
+    res.render('mars', {planetMars});
 });
 
 app.listen(3000, () => {
