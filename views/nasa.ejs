@@ -5,14 +5,19 @@
     <h1>The Solar System</h1>
     <%- include('partials/nav.ejs') %>
 
-    <h2>NASA</h2>
+    <div id="main">
+        <h2>NASA</h2>
 
-   <!-- Today's image is a video -->
-    <video controls autoplay muted loop playsinline>
-        <source src="<%=image%>" type="video/mp4">
-    </video>
+        <!-- Today's image is a video -->
+        <video width="300" controls autoplay muted loop playsinline>
+            <source src="<%=image%>" type="video/mp4">
+        </video>
+        
+        <div class="planet-details">
+            <p><%=imageDescription%></p>
+        </div>
 
-    <p><%=imageDescription%></p>
+    </div>
 
     <%- include('partials/footer.ejs') %>
     

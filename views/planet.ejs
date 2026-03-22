@@ -5,10 +5,54 @@
     <h1>The Solar System</h1>
     <%- include('partials/nav.ejs') %>
 
-    <h2><%=planetName%></h2>
+    <div id="main">
 
-    <img src="<%=planetInfo.image%>">
+        <h2><%=planetName%></h2>
 
+        <div class="planet-content">
+            <div class="media-container">
+                <img src="<%=planetInfo.image%>" alt="Picture of <%=planetName%>">
+            </div>
+
+            <div class="planet-details">
+                <h3>Facts about <%=planetName%></h3>
+                <table>
+                    <tr>
+                        <td><strong>Distance from the Sun</strong></td>
+                        <td><%=planetInfo.distanceFromSun%></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Length of a year</strong></td>
+                        <td><%=planetInfo.yearLength%></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Description</strong></td>
+                        <td><%=planetInfo.description%></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Radius</strong></td>
+                        <td><%=planetInfo.radius%></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Website</strong></td>
+                        <td><a href=<%=planetInfo.websiteLink%>>Official NASA Site</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Day length</strong></td>
+                        <td><%=planetInfo.oneEarthDay%></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Number of Moons</strong></td>
+                        <td><%=planetInfo.moons%></td>
+                    </tr>
+
+                </table>
+
+
+            </div>
+        </div>
+
+    </div>
 
     <%- include('partials/footer.ejs') %>
     
