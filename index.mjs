@@ -27,6 +27,12 @@ app.get('/mars/', (req,res) => {
     res.render('mars', {planetMars});
 });
 
+app.get('/planet', (req,res) => {
+    let planetName = req.query.planetName;
+    let planetInfo = planets[`get${planetName}`]();
+    res.render('planet', {planetInfo, planetName});
+});
+
 app.listen(3000, () => {
    console.log('server started');
 });
