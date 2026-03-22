@@ -8,15 +8,20 @@
     <div id="main">
         <h2>NASA</h2>
 
-        <!-- Today's image is a video -->
-        <video width="300" controls autoplay muted loop playsinline>
-            <source src="<%=image%>" type="video/mp4">
-        </video>
-        
-        <div class="planet-details">
-            <p><%=imageDescription%></p>
-        </div>
+        <div class="planet-content">
+            <div class="media-container">
+                <!-- Today's image is a video -->
+                <video width="300" controls autoplay muted loop playsinline>
+                    <source src="<%=image%>" type="video/mp4">
+                </video>
 
+            </div>
+            
+            <div class="planet-details">
+                <p><%=imageDescription%></p>
+            </div>
+            
+        </div>
     </div>
 
     <%- include('partials/footer.ejs') %>
