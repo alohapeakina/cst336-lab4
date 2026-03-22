@@ -33,6 +33,15 @@ app.get('/planet', (req,res) => {
     res.render('planet', {planetInfo, planetName});
 });
 
+app.get('/nasa', async(req,res) => {
+    let url='https://api.nasa.gov/planetary/apod?api_key=9mUzIkhlZCZaOoMfspg7jMmwZCZ4LiRHtkgkambD';
+    let response = await fetch(url);
+    let data= await response.json();
+    let imageURL = data.url;
+    let imageDescription = data.explanation;
+    res.render("nasa", {"image":imageURL,"imageDescription":imageDescription});
+});
+
 app.listen(3000, () => {
    console.log('server started');
 });

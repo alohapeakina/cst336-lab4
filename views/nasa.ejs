@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head.ejs') %>
+<body>
+    <h1>The Solar System</h1>
+    <%- include('partials/nav.ejs') %>
+
+    <h2>NASA</h2>
+
+   <!-- Today's image is a video -->
+    <video controls autoplay muted loop playsinline>
+        <source src="<%=image%>" type="video/mp4">
+    </video>
+
+    <p><%=imageDescription%></p>
+
+    <%- include('partials/footer.ejs') %>
+    
+</body>
+</html>
