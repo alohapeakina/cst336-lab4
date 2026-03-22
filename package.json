@@ -12,6 +12,7 @@
   "type": "commonjs",
   "dependencies": {
     "ejs": "^5.0.1",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "npm-solarsystem": "^1.1.5"
   }
 }
