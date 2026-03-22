@@ -18,6 +18,14 @@
                 <h3>Facts about <%=planetName%></h3>
                 <table>
                     <tr>
+                        <td><strong>NASA Info</strong></td>
+                        <td><a href=<%=planetInfo.websiteLink%>>Official Site</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Description</strong></td>
+                        <td><%=planetInfo.description%></td>
+                    </tr>
+                    <tr>
                         <td><strong>Distance from the Sun</strong></td>
                         <td><%=planetInfo.distanceFromSun%></td>
                     </tr>
@@ -26,20 +34,12 @@
                         <td><%=planetInfo.yearLength%></td>
                     </tr>
                     <tr>
-                        <td><strong>Description</strong></td>
-                        <td><%=planetInfo.description%></td>
+                        <td><strong>Day length</strong></td>
+                        <td><%=planetInfo.oneEarthDay%></td>
                     </tr>
                     <tr>
                         <td><strong>Radius</strong></td>
                         <td><%=planetInfo.radius%></td>
-                    </tr>
-                    <tr>
-                        <td><strong>NASA Info</strong></td>
-                        <td><a href=<%=planetInfo.websiteLink%>>Official Site</a></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Day length</strong></td>
-                        <td><%=planetInfo.oneEarthDay%></td>
                     </tr>
                     <tr>
                         <td><strong>Number of Moons</strong></td>
