@@ -10,16 +10,19 @@
 
         <div class="planet-content">
             <div class="media-container">
-                <!-- Today's image is a video -->
-                <video controls autoplay muted loop playsinline>
-                    <source src="<%=image%>" type="video/mp4">
-                </video>
-
+                <!-- Dynamic handling if API provides a video instead of an image-->
+                 <% if (mediaType === 'video') { %>
+                    <video controls autoplay muted loop playsinline>
+                        <source src="<%=mediaURL%>" type="video/mp4">
+                    </video>
+                <%} else { %>
+                    <img src="<%=mediaURL%>" alt="NASA Picture of the Day">
+                <% } %>
             </div>
             
             <div class="planet-details">
                 <h3>About This Image</h3>
-                <p><%=imageDescription%></p>
+                <p><%=mediaDescription%></p>
             </div>
             
         </div>

@@ -37,9 +37,10 @@ app.get('/nasa', async(req,res) => {
     let url='https://api.nasa.gov/planetary/apod?api_key=9mUzIkhlZCZaOoMfspg7jMmwZCZ4LiRHtkgkambD';
     let response = await fetch(url);
     let data= await response.json();
-    let imageURL = data.url;
-    let imageDescription = data.explanation;
-    res.render("nasa", {"image":imageURL,"imageDescription":imageDescription});
+    let mediaType = data.media_type;
+    let mediaURL = data.url;
+    let mediaDescription = data.explanation;
+    res.render("nasa", {"mediaType":mediaType,"mediaURL":mediaURL,"mediaDescription":mediaDescription});
 });
 
 app.listen(3000, () => {
