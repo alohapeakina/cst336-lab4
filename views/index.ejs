@@ -2,6 +2,12 @@
 <html lang="en">
 
 <%- include('partials/head.ejs') %>
+<style>
+    body {
+        background-image: url("<%= image %>");
+        background-size: cover;
+    }
+</style>
 
 <body>
     <h1>The Solar System</h1>
@@ -10,7 +16,7 @@
 
 
     <img src="/img/solar-system.jpg">
-    
+
     <%- include('partials/footer.ejs') %>
 </body>
 </html>
